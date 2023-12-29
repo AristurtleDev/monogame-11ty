@@ -4,6 +4,7 @@
 module.exports = function (config) {
     config.addPassthroughCopy({ "static": "/" });
     config.addPassthroughCopy('content/articles/**/*.{png, jpg, jpeg}');
+    config.addPassthroughCopy('content/blog/**/*.{png, jpg, jpeg}');
     config.addPassthroughCopy({ "content/public/images": "/images" });
     config.addPassthroughCopy({ "content/public/js/**/*.js": "/js" });
     config.addPassthroughCopy({

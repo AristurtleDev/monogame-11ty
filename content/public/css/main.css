@@ -94,42 +94,6 @@ a[href^='https']:not([href*='monogame.net']):not(.btn)::after {
 }
 
 /*******************************************************************************
-*** Section: Admonitions
-*** Provides styling for admonition blocks within documentation articles
-*******************************************************************************/
-.admonition-title {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.admonition-title::before {
-  font-family: bootstrap-icons;
-  position: relative;
-  margin-right: .5em;
-  top: .2em;
-  font-size: 1.25em;
-  font-weight: 400;
-}
-
-.alert-light .admonition-title::before,
-.alert-info .admonition-title::before {
-  content: '\f431';
-}
-
-.alert-success .admonition-title::before {
-  content: '\f46b';
-}
-
-.alert-warning .admonition-title::before {
-  content: '\f33b';
-}
-
-.alert-danger .admonition-title::before {
-  content: '\f7f6'
-}
-
-/*******************************************************************************
 *** Section: MonoGame Utility Classes
 *** Utility classes used throughout the site that provide some MonoGame specific
 *** styling.
@@ -699,4 +663,46 @@ a[href^='https']:not([href*='monogame.net']):not(.btn)::after {
 
 .blog-body {
   line-height: 1.5;
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto
+}
+
+/*******************************************************************************
+*** Section: Admonitions
+*** Provides styling for admonition blocks within documentation articles
+*******************************************************************************/
+.admonition-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-block: .5rem !important;
+}
+
+.admonition-title::before {
+  font-family: bootstrap-icons;
+  position: relative;
+  margin-right: .5em;
+  top: .2em;
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+.alert-light .admonition-title::before,
+.alert-info .admonition-title::before {
+  content: '\f431';
+}
+
+.alert-success .admonition-title::before {
+  content: '\f46b';
+}
+
+.alert-warning .admonition-title::before {
+  content: '\f33b';
+}
+
+.alert-danger .admonition-title::before {
+  content: '\f7f6'
 }
