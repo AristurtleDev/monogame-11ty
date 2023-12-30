@@ -460,7 +460,7 @@ a[href^='https']:not([href*='monogame.net']):not(.btn)::after {
 .slogan {
   text-align: center;
   color: white;
-  font-size: 3.2em;
+  font-size: clamp(.5rem, 3vw + 1rem, 3.2em);
   margin-bottom: 20px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
   width: 100%;
