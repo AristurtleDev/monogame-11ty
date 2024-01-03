@@ -1,0 +1,45 @@
+name: GitHub Pages Deploy
+on:
+    push:
+        branches:
+            - 'main'
+    pull_request:
+        branches:
+            - 'main'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone Repository
+              uses: actions/checkout@v2
+              with:
+                submodules: recursive
+                
+            - name: Setup .NET SDK
+              uses: actions/setup-dotnet@v3
+              with:
+                dotnet-version: '8.0.x'
+
+            - name: Restore NPM Packages
+              run: npm install
+
+            - name: Build DocFX MetaData
+              run: npm run docfx
+
+            - name: Build Site
+              run: npm run build
+
+            - name: Setup Pages
+              run: actions/configure-pages@v4
+
+            - name: Upload Site
+              uses:  actions/upload-pages-artifact@v3
+              with: 
+                path: '_site'
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+              
+              
