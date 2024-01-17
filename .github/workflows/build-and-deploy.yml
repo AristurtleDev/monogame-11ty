@@ -9,7 +9,7 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         steps:
             - name: Clone Repository
               uses: actions/checkout@v2
@@ -34,5 +34,4 @@ jobs:
                 REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
                 REMOTE_USER: ${{ secrets.REMOTE_USER }}
                 TARGET: ${{ secrets.REMOTE_TARGET }}
-              
-              
+
