@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
     <link href="{{ permalink | absoluteUrl(site.hostname) }}" rel="self"/>
     <link href="{{ site.hostname }}"/>
     <updated>{{ collections.blogPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{{ site.hostname }}</id>
+    <id>{{ site.hostname }}/</id>
     <author>
         <name>MonoGame Foundation</name>
         <email>admin@monogame.net</email>
@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
             <link href="{{ absolutePostUrl }}"/>
             <updated>{{ post.date | dateToRfc3339 }}</updated>
             <id>{{ absolutePostUrl }}</id>
-            <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+            <content xml:lang="en-US" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
         </entry>
     {%- endfor %}
 </feed>
