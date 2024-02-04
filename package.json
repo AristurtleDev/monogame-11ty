@@ -1,10 +1,10 @@
 {
     "scripts": {
-        "dev": "set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js || export RUN_MODE=$npm_lifecycle_event; npx @11ty/eleventy --serve --config=./website/.eleventy.js",
-        "website": "set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js || export RUN_MODE=$npm_lifecycle_event; npx @11ty/eleventy --serve --config=./website/.eleventy.js",
-        "articles": "set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js || export RUN_MODE=$npm_lifecycle_event; npx @11ty/eleventy --serve --config=./website/.eleventy.js",
-        "build": "set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --config=./website/.eleventy.js || export RUN_MODE=$npm_lifecycle_event; npx @11ty/eleventy --serve --config=./website/.eleventy.js"
-    },    
+        "dev": "export RUN_MODE=$npm_lifecycle_event && npx @11ty/eleventy --serve --config=./website/.eleventy.js || set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js",
+        "website": "export RUN_MODE=$npm_lifecycle_event && npx @11ty/eleventy --serve --config=./website/.eleventy.js || set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js",
+        "articles": "export RUN_MODE=$npm_lifecycle_event && npx @11ty/eleventy --serve --config=./website/.eleventy.js || set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js",
+        "build": "export RUN_MODE=$npm_lifecycle_event && npx @11ty/eleventy --config=./website/.eleventy.js || set RUN_MODE=%npm_lifecycle_event% && npx @11ty/eleventy --serve --config=./website/.eleventy.js"
+    },     
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
         "@11ty/eleventy-navigation": "^0.3.5",
