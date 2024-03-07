@@ -12,6 +12,8 @@
       href: getting_started/1_setting_up_your_development_environment_windows.md
     - name: macOS / Linux
       href: getting_started/1_setting_up_your_development_environment_unix.md
+    - name: VSCode
+      href: getting_started/1_setting_up_your_development_environment_vscode.md
   - name: 2. Creating a new project
     items:
     - name: Visual Studio 2022
@@ -64,7 +66,3 @@
   href: tutorials.md
 - name: Help and Support
   href: help_and_support.md
-- name: Discussion Example
-  href: discussion_example.md  
-- name: Another Discussion Example
-  href: another_discussion_example.md    
